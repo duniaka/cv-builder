@@ -4,15 +4,12 @@
 
 Europass is fine if you enjoy filling out forms from 2025 :) This is not that.
 
----
-
 ## What it is
 
 A Next.js app that renders your CV as a clean, printable PDF — straight from the browser. No account, no subscription, no data sent anywhere. Just open it, fill it in, export it.
 
 Live-editable. Click any text on the CV and type. Everything updates in real time.
 
----
 
 ## Features
 
@@ -23,7 +20,6 @@ Live-editable. Click any text on the CV and type. Everything updates in real tim
 - **Sections** — About, Skills, Experience, Certifications, Honours, Languages
 - **Zero backend** — runs entirely in the browser, no server, no cloud
 
----
 
 ## Stack
 
@@ -31,7 +27,6 @@ Live-editable. Click any text on the CV and type. Everything updates in real tim
 - Pure CSS (no UI lib, no Tailwind, no component framework)
 - `window.print()` for PDF — the most underrated browser API
 
----
 
 ## Run it
 
@@ -42,7 +37,6 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000). Edit the CV. Click `Export PDF`.
 
----
 
 ## Data format
 
@@ -68,7 +62,6 @@ Your CV lives in a JSON file. Import it, edit it, export it. Schema is in [`publ
 }
 ```
 
----
 
 ## Credits
 
@@ -78,7 +71,6 @@ Design inspired by the excellent templates from:
 
 Huge thanks.
 
----
 
 ## License
 
