@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["fullName", "jobTitle", "phone", "email", "location", "website", "linkedin", "github", "aboutMe", "skills", "experience", "certifications", "honours", "languages"],
+  "properties": {
+    "photo": { "type": ["string", "null"] },
+    "fullName": { "type": "string" },
+    "jobTitle": { "type": "string" },
+    "phone": { "type": "string" },
+    "email": { "type": "string" },
+    "location": { "type": "string" },
+    "website": { "type": "string" },
+    "websiteUrl": { "type": "string" },
+    "linkedin": { "type": "string" },
+    "linkedinUrl": { "type": "string" },
+    "github": { "type": "string" },
+    "githubUrl": { "type": "string" },
+    "aboutMe": { "type": "string" },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["category", "type", "value"],
+        "properties": {
+          "category": { "type": "string" },
+          "type": { "type": "string", "enum": ["dev", "data", "domain", "biz"] },
+          "value": { "type": "string" }
+        }
+      }
+    },
+    "experience": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["end", "start", "role", "company", "bullets", "tags"],
+        "properties": {
+          "end": { "type": "string" },
+          "start": { "type": "string" },
+          "role": { "type": "string" },
+          "company": { "type": "string" },
+          "bullets": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["text", "type"],
+              "properties": {
+                "text": { "type": "string" },
+                "type": { "type": "string", "enum": ["dev", "data", "domain", "biz"] }
+              }
+            }
+          }
+        }
+      }
+    },
+    "certifications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["year", "description"],
+        "properties": {
+          "year": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "honours": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["year", "text"],
+        "properties": {
+          "year": { "type": "string" },
+          "text": { "type": "string" }
+        }
+      }
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "level"],
+        "properties": {
+          "name": { "type": "string" },
+          "level": { "type": "integer", "minimum": 1, "maximum": 5 }
+        }
+      }
+    }
+  }
+}

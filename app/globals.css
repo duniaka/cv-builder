@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 0.3;
+}
+
+input,
+textarea {
+  font-family: inherit;
+}
+
+[data-placeholder]:empty::before {
+  content: attr(data-placeholder);
+  color: #ccc;
+  pointer-events: none;
+}
+
+@media print {
+  @page { margin: 5mm 10mm; size: A4; }
+
+  nav { display: none !important; }
+
+  .builder-wrap {
+    background: none !important;
+    padding: 0 !important;
+    min-height: unset !important;
+  }
+
+  .cv-sheet {
+    box-shadow: none !important;
+    padding: 0 !important;
+    zoom: 0.85;
+  }
+
+  .print-hide-empty:has(input:placeholder-shown),
+  .print-hide-empty:has([contenteditable][data-placeholder]:empty) {
+    display: none !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}

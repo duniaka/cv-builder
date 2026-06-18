@@ -1,0 +1,91 @@
+.deleteBtn {
+  opacity: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ccc;
+  font-size: 10px;
+  padding: 0 3px;
+  line-height: 1;
+  vertical-align: middle;
+  transition: color 0.1s;
+  flex-shrink: 0;
+}
+
+.deleteBtn:hover {
+  color: #ef4444;
+}
+
+.row:hover .deleteBtn,
+.entry:hover .deleteBtn,
+.item:hover .deleteBtn {
+  opacity: 1;
+}
+
+.addBtn {
+  background: none;
+  border: 1px dashed #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #bbb;
+  font-size: 11px;
+  padding: 1px 8px;
+  margin-top: 5px;
+  display: inline-block;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+
+.addBtn:hover {
+  border-color: #1a1366;
+  color: #1a1366;
+}
+
+.row {
+}
+
+.autoInput {
+  display: inline-grid;
+  vertical-align: top;
+}
+
+.autoInput::after {
+  content: attr(data-value) ' ';
+  visibility: hidden;
+  grid-area: 1/1;
+  white-space: pre;
+  font: inherit;
+  padding: 0;
+}
+
+.autoInput input {
+  grid-area: 1/1;
+  width: 100%;
+  min-width: 1em;
+}
+
+.entry {
+  display: flex;
+  gap: 14px;
+}
+
+.item {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  list-style: none;
+}
+
+.bullet::before {
+  content: '•';
+  flex-shrink: 0;
+  font-size: 10px;
+  line-height: 1;
+  color: var(--text);
+}
+
+@media print {
+  .deleteBtn { display: none !important; }
+  .addBtn { display: none !important; }
+}
+

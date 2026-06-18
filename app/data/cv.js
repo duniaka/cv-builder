@@ -1,0 +1,40 @@
+export const defaultCV = {
+  photo: null,
+  fullName: '',
+  jobTitle: '',
+  phone: '',
+  email: '',
+  location: '',
+  website: '',
+  linkedin: '',
+  github: '',
+  aboutMe: '',
+  skills: [
+    { category: 'Development', type: 'dev', value: '' },
+    { category: 'Data & Infra', type: 'data', value: '' },
+    { category: 'Domain', type: 'domain', value: '' },
+    { category: 'Product & Business', type: 'biz', value: '' },
+  ],
+  experience: [
+    { end: '', start: '', role: '', company: '', bullets: [], tags: [] },
+    { end: '', start: '', role: '', company: '', bullets: [], tags: [] },
+    { end: '', start: '', role: '', company: '', bullets: [], tags: [] },
+  ],
+  certifications: [
+    { year: '', description: '' },
+    { year: '', description: '' },
+    { year: '', description: '' },
+  ],
+  honours: [
+    { year: '', text: '' },
+    { year: '', text: '' },
+    { year: '', text: '' },
+    { year: '', text: '' },
+  ],
+  languages: [
+    { name: '', level: 5 },
+    { name: '', level: 5 },
+    { name: '', level: 4 },
+    { name: '', level: 2 },
+  ],
+};
